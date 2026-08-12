@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayati Sahin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="logo">HS.</div>
+      <ul class="nav-links">
+        <li><a href="#projecten">Projects</a></li>
+        <li><a href="#stage">Stage</a></li>
+        <li><a href="#over-mij">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- LANDING -->
+    <div id="landing">
+      <div class="grote-naam">Hayati Sahin</div>
+      <div class="naam-sub">Full Stack <span>Developer</span> · Antwerp</div>
+      <div
+        class="scroll-pijl"
+        onclick="
+          document
+            .getElementById('intro')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        <p>Scroll</p>
+        <div class="pijl-cirkel">
+          <svg
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <polyline points="19 12 12 19 5 12" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <section id="intro">
+      <div class="intro-raster">
+        <div class="intro-tekst">
+          <p>
+            I am Hayati, a
+            <strong>Junior Full Stack Developer</strong> from Antwerp with a
+            passion for building modern web applications. I continuously develop
+            my skills by working on personal projects, exploring new
+            technologies, and challenging myself with practical solutions.
+          </p>
+          <p>
+            I am a self-driven and curious developer who enjoys learning
+            independently, taking initiative, and solving technical challenges.
+            I like to understand how things work, experiment with different
+            approaches, and keep working on a problem until I find a solid
+            solution. At the same time, I enjoy collaborating with others,
+            sharing ideas, learning from teammates, and contributing to a team
+            to achieve a common goal.
+          </p>
+          <p>
+            For me, the best way to grow is simple: build, experiment, and keep
+            improving.
+          </p>
+
+          <div class="knoppen">
+            <a href="#projecten" class="btn-groen">View projects</a>
+            <a href="#contact" class="btn-lijn">Contact</a>
+          </div>
+        </div>
+        <div class="stat-blokken">
+          <div class="stat-blok"><b>5+</b><span>Projects</span></div>
+          <div class="stat-blok">
+            <b>4+</b><span>Years of experience in programming</span>
+          </div>
+          <div class="stat-blok"><b>Web</b><span>Full Stack Dev</span></div>
+          <div class="stat-blok"><b>Game</b><span>Unity / C#</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTEN -->
+
+    <section id="projecten">
+      <span class="klein-label">My Work</span>
+      <h2>Projects</h2>
+      <p class="sectie-sub">Click on a project for more information.</p>
+      <div class="project-raster">
+        <div class="project-kaart" onclick="openModal('modal-1')">
+          <div class="kaart-info">
+            <div class="tags">
+              <span class="tag">Full Stack</span
+              ><span class="tag">TypeScript</span><span class="tag">Web</span>
+            </div>
+            <h3>Flight Booking System</h3>
+            <p>
+              A web application for searching, booking, and managing flights.
+            </p>
+            <div class="meer-info">More info →</div>
+          </div>
+        </div>
+
+        <div class="project-kaart" onclick="openModal('modal-2')">
+          <div class="kaart-info">
+            <div class="tags">
+              <span class="tag">ASP.NET</span><span class="tag">C#</span
+              ><span class="tag">SQL</span>
+            </div>
+            <h3>Showroom Management System</h3>
+            <p>A management system for a car showroom.</p>
+            <div class="meer-info">More info →</div>
+          </div>
+        </div>
+
+        <div class="project-kaart" onclick="openModal('modal-3')">
+          <div class="kaart-info">
+            <div class="tags">
+              <span class="tag">MERN</span><span class="tag">React</span
+              ><span class="tag">MongoDB</span>
+            </div>
+            <h3>E-Commerce Platform</h3>
+            <p>
+              A learning project that simulates an online store, built with the
+              MERN stack.
+            </p>
+            <div class="meer-info">More info →</div>
+          </div>
+        </div>
+
+        <div class="project-kaart" onclick="openModal('modal-4')">
+          <div class="kaart-info">
+            <div class="tags">
+              <span class="tag">Unity</span><span class="tag">C#</span
+              ><span class="tag">Game Dev</span>
+            </div>
+            <h3>Car Parking Game</h3>
+            <p>A 3D parking game that I developed myself using Unity.</p>
+            <div class="meer-info">More info →</div>
+          </div>
+        </div>
+
+        <div class="project-kaart" onclick="openModal('modal-5')">
+          <div class="kaart-info">
+            <div class="tags">
+              <span class="tag">Java</span><span class="tag">Leaflet.js</span
+              ><span class="tag">API</span>
+            </div>
+            <h3>Mini Flight Tracker</h3>
+            <p>Displays live aircraft on an interactive map in real time.</p>
+            <div class="meer-info">More info →</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALS -->
+    <div class="modal-bg" id="modal-1">
+      <div class="modal-box">
+        <div class="modal-balk">
+          <span>Flight Booking Systeem</span
+          ><button class="sluit" onclick="sluitModal('modal-1')">✕</button>
+        </div>
+        <div class="modal-tekst">
+          <h3>Flight Booking Systeem</h3>
+          <div class="project-media">
+            <div class="image-container">
+              <img src="images/Flightbooking/Hero.png" alt="Hero" />
+              <button onclick="openImage('images/Flightbooking/Hero.png')">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/Flightbooking/Landing.png" alt="Landing" />
+              <button onclick="openImage('images/Flightbooking/Landing.png')">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/Flightbooking/Flights.png" alt="Flights" />
+              <button onclick="openImage('images/Flightbooking/Flights.png')">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/Flightbooking/Booking.png" alt="Flights" />
+              <button onclick="openImage('images/Flightbooking/Booking.png')">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/Flightbooking/Login.png" alt="Flights" />
+              <button onclick="openImage('images/Flightbooking/Login.png')">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/Flightbooking/Register.png" alt="Flights" />
+              <button onclick="openImage('images/Flightbooking/Register.png')">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img
+                src="images/Flightbooking/Admin_Dashboard.png"
+                alt="Flights"
+              />
+              <button
+                onclick="openImage('images/Flightbooking/Admin_Dashboard.png')"
+              >
+                ⛶
+              </button>
+            </div>
+          </div>
+          <p class="omschrijving">
+            A full stack web application that allows users to search for and
+            book flights. Users can log in, view flights, and make reservations.
+            The admin section allows flights and bookings to be managed.
+          </p>
+          <ul>
+            <li>Login with session management</li>
+            <li>Search for flights by destination, date, and availability</li>
+            <li>Book flights</li>
+            <li>Admin panel for managing flights, passengers, and bookings</li>
+          </ul>
+
+          <div class="stack-rij">
+            <span class="stack-tag">TypeScript</span
+            ><span class="stack-tag">Node.js</span
+            ><span class="stack-tag">Express</span
+            ><span class="stack-tag">EJS</span
+            ><span class="stack-tag">MongoDB</span>
+          </div>
+          <div class="notitie">
+            Educational project — not a real booking service.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-bg" id="modal-2">
+      <div class="modal-box">
+        <div class="modal-balk">
+          <span>Showroom Management Systeem</span
+          ><button class="sluit" onclick="sluitModal('modal-2')">✕</button>
+        </div>
+        <div class="modal-tekst">
+          <h3>Showroom Management Systeem</h3>
+          <div class="project-media">
+            <div class="image-container">
+              <img src="images/Showroom/Home.png" alt="Showroom screenshot 1" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="images/Showroom/AddCar.png"
+                alt="Showroom screenshot 2"
+              />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="images/Showroom/Customers.png"
+                alt="Showroom screenshot 3"
+              />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <video controls>
+                <source src="images/Showroom/Demo.mp4" type="video/mp4" />
+              </video>
+              <button onclick="openVideo('images/Showroom/Demo.mp4')">⛶</button>
+            </div>
+          </div>
+          <p class="omschrijving">
+            A management system for a car showroom, built with ASP.NET Core
+            Razor Pages. The application uses SQL Server for data storage.
+          </p>
+          <ul>
+            <ul>
+              <li>Manage vehicles: brand, model, price, stock, and photos</li>
+              <li>Manage customers and reservations</li>
+              <li>Track vehicle status (available or reserved)</li>
+            </ul>
+          </ul>
+
+          <div class="stack-rij">
+            <span class="stack-tag">ASP.NET Core</span
+            ><span class="stack-tag">C#</span
+            ><span class="stack-tag">Razor Pages</span
+            ><span class="stack-tag">Entity Framework</span
+            ><span class="stack-tag">SQL Server</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-bg" id="modal-3">
+      <div class="modal-box">
+        <div class="modal-balk">
+          <span>E-Commerce Platform</span
+          ><button class="sluit" onclick="sluitModal('modal-3')">✕</button>
+        </div>
+        <div class="modal-tekst">
+          <h3>E-Commerce Platform</h3>
+          <div class="image-container">
+            <video controls>
+              <source
+                src="images/Scentbey/Demo_Ecommerce.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <button onclick="openVideo('images/Scentbey/Demo_Ecommerce.mp4')">
+              ⛶
+            </button>
+          </div>
+          <p class="omschrijving">
+            A learning project built with the MERN stack that simulates an
+            online store — browsing and filtering products without real
+            purchases.
+          </p>
+          <ul>
+            <li>Search and filter products</li>
+            <li>Product page with images and information</li>
+            <li>Simple login and registration</li>
+            <li>Contact form connected to the backend API</li>
+            <li>Chatbot functionality</li>
+          </ul>
+
+          <div class="stack-rij">
+            <span class="stack-tag">React</span
+            ><span class="stack-tag">Node.js</span
+            ><span class="stack-tag">Express</span
+            ><span class="stack-tag">MongoDB</span
+            ><span class="stack-tag">REST API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-bg" id="modal-4">
+      <div class="modal-box">
+        <div class="modal-balk">
+          <span>Car Parking Game</span
+          ><button class="sluit" onclick="sluitModal('modal-4')">✕</button>
+        </div>
+        <div class="modal-tekst">
+          <h3>Car Parking Game</h3>
+          <div class="project-media">
+            <div class="image-container">
+              <img src="images/CarParking/MainMenu.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img src="images/CarParking/Level_Demo.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img src="images/CarParking/LevelComplete.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img src="images/CarParking/Crash.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/CarParking/Level4.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/CarParking/Checkpoint_Demo.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/CarParking/Tunnel.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/CarParking/Different_Angle.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+            <div class="image-container">
+              <img src="images/CarParking/Map_Real.png" alt="" />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+          </div>
+          <p class="omschrijving">
+            A 3D parking game developed in Unity where the player controls a
+            vehicle, reaches designated parking zones, and completes different
+            levels. The game features custom gameplay systems such as vehicle
+            controls, checkpoints, a timer, and UI feedback.
+          </p>
+          <ul>
+            <li>CarController: acceleration, braking, steering, and grip</li>
+            <li>ParkingDetector with trigger colliders</li>
+            <li>CameraFollow with smooth damping</li>
+            <li>LevelManager for loading and unlocking levels</li>
+            <li>Timer</li>
+            <li>UI for main menu, HUD, crash feedback, and level completion</li>
+            <li>Audio feedback for gameplay events</li>
+          </ul>
+
+          <div class="stack-rij">
+            <span class="stack-tag">Unity Engine</span
+            ><span class="stack-tag">C#</span
+            ><span class="stack-tag">Rigidbody Physics</span
+            ><span class="stack-tag">PlayerPrefs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-bg" id="modal-5">
+      <div class="modal-box">
+        <div class="modal-balk">
+          <span>Mini Flight Tracker</span
+          ><button class="sluit" onclick="sluitModal('modal-5')">✕</button>
+        </div>
+        <div class="modal-tekst">
+          <h3>Mini Flight Tracker</h3>
+          <div class="project-media">
+            <div class="image-container">
+              <img
+                src="images/FlightTracker/Home.png"
+                alt="Flight Tracker screenshot 1"
+              />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="images/FlightTracker/Map.png"
+                alt="Flight Tracker screenshot 2"
+              />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="images/FlightTracker/Demo.png"
+                alt="Flight Tracker screenshot 3"
+              />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="images/FlightTracker/About.png"
+                alt="Flight Tracker screenshot 4"
+              />
+              <button onclick="openImage(this.previousElementSibling.src)">
+                ⛶
+              </button>
+            </div>
+          </div>
+          <p class="omschrijving">
+            A flight tracker that shows live aircraft on an interactive map.
+            Built with Leaflet and an external flight API.
+          </p>
+          <ul>
+            <li>Live map showing aircraft around the world</li>
+            <li>Real-time speed, altitude, and position</li>
+            <li>Sidebar with detailed flight information</li>
+            <li>Statistics such as highest altitude and fastest speed</li>
+          </ul>
+
+          <div class="stack-rij">
+            <span class="stack-tag">Java</span
+            ><span class="stack-tag">Spring Boot</span
+            ><span class="stack-tag">JavaScript</span
+            ><span class="stack-tag">Leaflet.js</span
+            ><span class="stack-tag">OpenSky API</span>
+            <span class="stack-tag">REST API</span>
+            <span class="stack-tag">Bearer Token Authentication</span>
+          </div>
+          <div class="notitie">
+            Processes live aviation data on an interactive map.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE -->
+    <section id="stage">
+      <span class="klein-label">Work Experience</span>
+      <h2>Internship</h2>
+      <p class="sectie-sub">My first real work experience in the IT sector.</p>
+      <div class="stage-kaart">
+        <div class="stage-streep"></div>
+        <div class="stage-info">
+          <div class="stage-bedrijf">Dematic NV</div>
+          <div class="stage-functie">Support Engineer (Internship)</div>
+          <div class="stage-meta">
+            <span>2 months</span>
+            <span>Secondary Education</span>
+            <span>IT Support</span>
+          </div>
+          <p>
+            During my internship at Dematic NV, I worked as a support engineer.
+            Dematic develops automated systems for supply chains. I learned what
+            IT support looks like in a real company — solving technical
+            problems, collaborating with colleagues, and communicating
+            professionally.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVER MIJ -->
+    <section id="over-mij">
+      <span class="klein-label">Who I Am</span>
+      <h2>About Me</h2>
+      <div class="over-raster">
+        <div class="over-tekst">
+          <p>
+            I am Hayati, a
+            <strong> Junior Full Stack Developer </strong>from Antwerp. I am
+            constantly working on new projects to further expand my skills.
+            Whether I am working on a web application or a Unity game, I see
+            every project as an opportunity to learn something new and challenge
+            myself.
+          </p>
+          <p>
+            Debugging is one of the parts I enjoy the most. I don't give up
+            easily when there is a problem — I keep searching, testing, and
+            analyzing until I find the cause and build a good solution. I bring
+            that determination into every project.
+          </p>
+        </div>
+        <div class="eigenschap-raster">
+          <div class="eigenschap">
+            <h4>Helpful</h4>
+            <p>
+              Always ready to help when someone gets stuck, even beyond my own
+              tasks.
+            </p>
+          </div>
+          <div class="eigenschap">
+            <h4>Empathetic</h4>
+            <p>I quickly understand what someone needs.</p>
+          </div>
+          <div class="eigenschap">
+            <h4>Team & Solo</h4>
+            <p>
+              I enjoy working together, but I am equally comfortable working
+              independently.
+            </p>
+          </div>
+          <div class="eigenschap">
+            <h4>Driven</h4>
+            <p>
+              I take responsibility for my work and make sure I see tasks
+              through to completion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <span class="klein-label">Skills</span>
+      <h2>What I Can Do</h2>
+      <p class="sectie-sub">My technical and professional skills.</p>
+      <div class="tab-rij">
+        <button class="tab-knop actief" onclick="toonTab('development', this)">
+          Development
+        </button>
+        <button class="tab-knop" onclick="toonTab('frameworks', this)">
+          Frameworks
+        </button>
+        <button class="tab-knop" onclick="toonTab('technologies', this)">
+          Technologies
+        </button>
+        <button class="tab-knop" onclick="toonTab('languages', this)">
+          Languages
+        </button>
+      </div>
+
+      <!-- TAB 1: PROGRAMMEERTALEN -->
+      <div id="tab-development" class="tab-inhoud actief">
+        <div class="pill-rij">
+          <div class="pill">C#</div>
+          <div class="pill">JavaScript</div>
+          <div class="pill">TypeScript</div>
+          <div class="pill">Java</div>
+          <div class="pill">PHP</div>
+          <div class="pill">HTML5</div>
+          <div class="pill">CSS3</div>
+        </div>
+      </div>
+
+      <!-- TAB 2: FRAMEWORKS & LIBRARIES -->
+      <div id="tab-frameworks" class="tab-inhoud">
+        <div class="pill-rij">
+          <div class="pill">React</div>
+          <div class="pill">Node.js / Express</div>
+          <div class="pill">Spring Boot</div>
+          <div class="pill">.NET</div>
+          <div class="pill">Entity Framework Core</div>
+          <div class="pill">Razor Pages</div>
+          <div class="pill">EJS Templates</div>
+          <div class="pill">Unity Engine</div>
+        </div>
+      </div>
+
+      <!-- TAB 3: TOOLS & TECHNOLOGIES -->
+      <div id="tab-technologies" class="tab-inhoud">
+        <div class="pill-rij">
+          <div class="pill">REST APIs</div>
+          <div class="pill">MongoDB</div>
+          <div class="pill">SQL</div>
+          <div class="pill">Docker</div>
+          <div class="pill">Git / GitHub</div>
+        </div>
+      </div>
+
+      <!-- TAB 4: SPOKEN LANGUAGES -->
+      <div id="tab-languages" class="tab-inhoud">
+        <div class="talen-lijst">
+          <div class="taal-kaart">
+            <div class="taal-vlag">ᴛʀ</div>
+            <div>
+              <div class="taal-naam">Turkish</div>
+              <div class="taal-niveau">Mother Tongue</div>
+            </div>
+            <div class="taal-badge badge-groen">Mother Tongue</div>
+          </div>
+
+          <div class="taal-kaart">
+            <div class="taal-vlag">ʙᴇ</div>
+            <div>
+              <div class="taal-naam">Dutch</div>
+              <div class="taal-niveau">Very Good</div>
+            </div>
+            <div class="taal-badge badge-blauw">Very Good</div>
+          </div>
+
+          <div class="taal-kaart">
+            <div class="taal-vlag">ɢʙ</div>
+            <div>
+              <div class="taal-naam">English</div>
+              <div class="taal-niveau">Good</div>
+            </div>
+            <div class="taal-badge badge-blauw">Good</div>
+          </div>
+
+          <div class="taal-kaart">
+            <div class="taal-vlag">ꜰʀ</div>
+            <div>
+              <div class="taal-naam">French</div>
+              <div class="taal-niveau">Conversational</div>
+            </div>
+            <div class="taal-badge badge-grijs">Conversational</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="leer-banner">
+        <div class="leer-bol"></div>
+        <div>
+          <div class="leer-tekst">
+            Continuously working on projects and learning.
+          </div>
+        </div>
+        <div class="leer-tags"><span>keeps growing</span></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-vak">
+        <span class="klein-label" style="display: block; text-align: center"
+          >Contact</span
+        >
+        <h2>Have a project in mind?</h2>
+        <p>
+          Feel free to send me a message. Whether it's about work, freelance, or
+          a collaboration — I reply quickly.
+        </p>
+        <div class="contact-knoppen">
+          <a href="mailto:hayatiiibjk@gmail.com" class="btn-groen"
+            >Send an email</a
+          >
+          <a href="https://github.com/Hayatiii40" class="btn-lijn">GitHub</a>
+          <a
+            href="https://linkedin.com/in/hayati-sahin-b53730238"
+            class="btn-lijn"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </section>
+    <div id="image-modal" class="image-modal" onclick="closeImage()">
+      <img id="fullscreen-image" />
+    </div>
+    <div id="video-modal" class="image-modal">
+      <button class="close-media" onclick="closeVideo()">✕</button>
+      <video id="fullscreen-video" controls></video>
+    </div>
+    <footer>Hayati Sahin · Antwerp 🇧🇪</footer>
+
+    <script>
+      // Modal openen en sluiten
+      function openModal(id) {
+        document.getElementById(id).classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function sluitModal(id) {
+        document.getElementById(id).classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      // Klik buiten modal = sluiten
+      document.querySelectorAll(".modal-bg").forEach(function (m) {
+        m.addEventListener("click", function (e) {
+          if (e.target === m) sluitModal(m.id);
+        });
+      });
+
+      // Escape toets = sluiten
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          document.querySelectorAll(".modal-bg.open").forEach(function (m) {
+            sluitModal(m.id);
+          });
+        }
+      });
+
+      // Tabs wisselen
+      function toonTab(naam, knop) {
+        document.querySelectorAll(".tab-inhoud").forEach(function (t) {
+          t.classList.remove("actief");
+        });
+        document.querySelectorAll(".tab-knop").forEach(function (k) {
+          k.classList.remove("actief");
+        });
+        document.getElementById("tab-" + naam).classList.add("actief");
+        knop.classList.add("actief");
+      }
+
+      // Nav donker maken bij scrollen
+      window.addEventListener("scroll", function () {
+        document
+          .getElementById("nav")
+          .classList.toggle("scrolled", window.scrollY > 60);
+      });
+      function openImage(src) {
+        const modal = document.getElementById("image-modal");
+        const image = document.getElementById("fullscreen-image");
+
+        image.src = src;
+        modal.style.display = "flex";
+      }
+
+      function closeImage() {
+        document.getElementById("image-modal").style.display = "none";
+      }
+      function openVideo(src) {
+        const modal = document.getElementById("video-modal");
+        const video = document.getElementById("fullscreen-video");
+
+        video.src = src;
+        modal.style.display = "flex";
+        video.play();
+      }
+
+      function closeVideo() {
+        const modal = document.getElementById("video-modal");
+        const video = document.getElementById("fullscreen-video");
+
+        video.pause();
+        video.src = "";
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
