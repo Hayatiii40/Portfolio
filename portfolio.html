@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="functions.js"></script>
   </head>
   <body>
     <nav id="nav">
@@ -22,7 +23,6 @@
       </ul>
     </nav>
 
-    <!-- LANDING -->
     <div id="landing">
       <div class="grote-naam">Hayati Sahin</div>
       <div class="naam-sub">Full Stack <span>Developer</span> · Antwerp</div>
@@ -48,7 +48,6 @@
       </div>
     </div>
 
-    <!-- INTRO -->
     <section id="intro">
       <div class="intro-raster">
         <div class="intro-tekst">
@@ -88,8 +87,6 @@
         </div>
       </div>
     </section>
-
-    <!-- PROJECTEN -->
 
     <section id="projecten">
       <span class="klein-label">My Work</span>
@@ -163,7 +160,6 @@
       </div>
     </section>
 
-    <!-- MODALS -->
     <div class="modal-bg" id="modal-1">
       <div class="modal-box">
         <div class="modal-balk">
@@ -524,7 +520,6 @@
       </div>
     </div>
 
-    <!-- STAGE -->
     <section id="stage">
       <span class="klein-label">Work Experience</span>
       <h2>Internship</h2>
@@ -550,7 +545,6 @@
       </div>
     </section>
 
-    <!-- OVER MIJ -->
     <section id="over-mij">
       <span class="klein-label">Who I Am</span>
       <h2>About Me</h2>
@@ -601,7 +595,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
       <span class="klein-label">Skills</span>
       <h2>What I Can Do</h2>
@@ -621,7 +614,6 @@
         </button>
       </div>
 
-      <!-- TAB 1: PROGRAMMEERTALEN -->
       <div id="tab-development" class="tab-inhoud actief">
         <div class="pill-rij">
           <div class="pill">C#</div>
@@ -634,7 +626,6 @@
         </div>
       </div>
 
-      <!-- TAB 2: FRAMEWORKS & LIBRARIES -->
       <div id="tab-frameworks" class="tab-inhoud">
         <div class="pill-rij">
           <div class="pill">React</div>
@@ -648,7 +639,6 @@
         </div>
       </div>
 
-      <!-- TAB 3: TOOLS & TECHNOLOGIES -->
       <div id="tab-technologies" class="tab-inhoud">
         <div class="pill-rij">
           <div class="pill">REST APIs</div>
@@ -659,7 +649,6 @@
         </div>
       </div>
 
-      <!-- TAB 4: SPOKEN LANGUAGES -->
       <div id="tab-languages" class="tab-inhoud">
         <div class="talen-lijst">
           <div class="taal-kaart">
@@ -711,7 +700,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="contact-vak">
         <span class="klein-label" style="display: block; text-align: center"
@@ -743,81 +731,5 @@
       <video id="fullscreen-video" controls></video>
     </div>
     <footer>Hayati Sahin · Antwerp 🇧🇪</footer>
-
-    <script>
-      // Modal openen en sluiten
-      function openModal(id) {
-        document.getElementById(id).classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-
-      function sluitModal(id) {
-        document.getElementById(id).classList.remove("open");
-        document.body.style.overflow = "";
-      }
-
-      // Klik buiten modal = sluiten
-      document.querySelectorAll(".modal-bg").forEach(function (m) {
-        m.addEventListener("click", function (e) {
-          if (e.target === m) sluitModal(m.id);
-        });
-      });
-
-      // Escape toets = sluiten
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-          document.querySelectorAll(".modal-bg.open").forEach(function (m) {
-            sluitModal(m.id);
-          });
-        }
-      });
-
-      // Tabs wisselen
-      function toonTab(naam, knop) {
-        document.querySelectorAll(".tab-inhoud").forEach(function (t) {
-          t.classList.remove("actief");
-        });
-        document.querySelectorAll(".tab-knop").forEach(function (k) {
-          k.classList.remove("actief");
-        });
-        document.getElementById("tab-" + naam).classList.add("actief");
-        knop.classList.add("actief");
-      }
-
-      // Nav donker maken bij scrollen
-      window.addEventListener("scroll", function () {
-        document
-          .getElementById("nav")
-          .classList.toggle("scrolled", window.scrollY > 60);
-      });
-      function openImage(src) {
-        const modal = document.getElementById("image-modal");
-        const image = document.getElementById("fullscreen-image");
-
-        image.src = src;
-        modal.style.display = "flex";
-      }
-
-      function closeImage() {
-        document.getElementById("image-modal").style.display = "none";
-      }
-      function openVideo(src) {
-        const modal = document.getElementById("video-modal");
-        const video = document.getElementById("fullscreen-video");
-
-        video.src = src;
-        modal.style.display = "flex";
-        video.play();
-      }
-
-      function closeVideo() {
-        const modal = document.getElementById("video-modal");
-        const video = document.getElementById("fullscreen-video");
-
-        video.pause();
-        video.src = "";
-        modal.style.display = "none";
-      }
-    </script>
   </body>
 </html>
